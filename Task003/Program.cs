@@ -32,8 +32,7 @@ void ExamiNation(int[] arr, int num)
         {
             Console.WriteLine("yes");
             return;
-        }
-        
+        }   
     }
     Console.WriteLine("no");
 }
