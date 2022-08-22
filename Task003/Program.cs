@@ -33,10 +33,9 @@ void ExamiNation(int[] arr, int num)
             Console.WriteLine("yes");
             return;
         }
-        Console.WriteLine("no");
-        return;    
+        
     }
-
+    Console.WriteLine("no");
 }
 
 int number = new Random().Next(-10,10);
