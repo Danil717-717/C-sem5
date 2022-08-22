@@ -24,7 +24,7 @@ void PrintArray(int[] array)
 
 
 void SignReplacPos(int[] arr)
-{                                                  // чтоб в одной функции находить сумму полож и отрицат чисел 
+{                                                  
 
     for(int i = 0; i < arr.Length; i++)
     {
