@@ -25,32 +25,31 @@ void PrintArray(int[] array)
 // arr[0]*arr[arr.Length-1]
 // arr[1]*arr[arr.Length-2]
 
-int [] ProductPairsNumbersFif(int[] arr)
+int[] MultiPlic(int[] array) //создает новый массив
 {
-    int len = arr.Length;
-    int new_len = 0;
-    if(len % 2 == 0) 
+    int n;
+    if(array.Length % 2 == 0) 
     {
-        new_len = new_len / 2;
+        n = array.Length / 2;
     }    
     else 
     {
-        new_len = len / 2 + 1;
+        n = array.Length / 2 + 1;
     }
 
-    int [] new_array = new int[new_len];
-
-    for(int i = 0; i < new_len; i++)
+    int [] newarray = new int[n];
+    for(int i = 0; i < array.Length/2; i++)
     {
-        new_array[i] = arr[i] * arr[len - 1 - i];
+        newarray[i] = array[i] * array[array.Length - 1 - i];
     }
-    return new_array;
+    if(array.Length % 2 != 0) newarray[array.Length / 2] = array[array.Length / 2];
+    return newarray;
 }
 
-Console.Write("Введите желаемую длинну массива: ");
-int len_array = Convert.ToInt32(Console.ReadLine());
 
-int[] myarr = CreateArray(len_array, 1, 100);
+
+
+int[] myarr = CreateArray(10, 1, 100);
 PrintArray(myarr);
-int[] narray = ProductPairsNumbersFif(myarr);
-Console.Write(narray);
+int[] newarray = MultiPlic(myarr);
+PrintArray(newarray);
